@@ -52,5 +52,27 @@ const itCompanies = [
 
 console.log(itCompanies)
 console.log(itCompanies.length)
+console.log(itCompanies[0], itCompanies[3], itCompanies[6])
+for (const company of itCompanies) {
+  console.log(company);
+}
+for (const company of itCompanies) {
+  console.log(company.toUpperCase());
+}
+
+const sentence = itCompanies.reduce((result, company, index) => {
+  if (itCompanies.length - 1=== index) {
+    result += ` and ${company} are big IT companies.`;
+  } else if (index === 0) {
+    result += `${company}`;
+  } else {
+    result += `, ${company}`;
+  }
+
+  return result;
+}, '');
+
+console.log(sentence);
+
 
 
