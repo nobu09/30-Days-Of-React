@@ -74,5 +74,18 @@ const sentence = itCompanies.reduce((result, company, index) => {
 
 console.log(sentence);
 
+index = itCompanies.indexOf("Unisys") 
+if (index === -1) {
+  console.log('not found');
+} else {
+  console.log(itCompanies[index]);
+}
 
+for (const company of itCompanies) {
+  if (company.indexOf('o') !== -1) {
+    console.log(company);
+  }
+}
 
+console.log(itCompanies.sort());
+console.log(itCompanies.reverse());
