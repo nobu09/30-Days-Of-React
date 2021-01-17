@@ -89,3 +89,23 @@ for (const company of itCompanies) {
 
 console.log(itCompanies.sort());
 console.log(itCompanies.reverse());
+
+console.log(itCompanies.slice(0, 3));
+console.log(itCompanies.slice(4, 7));
+console.log(itCompanies.slice(2, 5));
+
+itCompanies.shift();
+console.log("shift");
+console.log(itCompanies);
+
+itCompanies.splice(3, 1);
+console.log("途中を削除");
+console.log(itCompanies);
+
+itCompanies.pop();
+console.log("pop");
+console.log(itCompanies);
+
+itCompanies.splice(0);
+console.log("全削除");
+console.log(itCompanies);
