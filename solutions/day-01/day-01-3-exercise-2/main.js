@@ -8,7 +8,7 @@ const textArray = text.split(/[\s,.]+/);
 console.log(textArray);
 console.log(textArray.length);
 
-const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+let shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
 if (!shoppingCart.includes('Meat')) {
   shoppingCart.unshift('Meat');
 }
@@ -18,3 +18,7 @@ if (!shoppingCart.includes('Sugar')) {
   shoppingCart.push('Sugar');
 }
 console.log(shoppingCart);
+
+shoppingCart = shoppingCart.filter(item => item !== 'Honey')
+console.log(shoppingCart);
+
