@@ -19,6 +19,16 @@ if (!shoppingCart.includes('Sugar')) {
 }
 console.log(shoppingCart);
 
-shoppingCart = shoppingCart.filter(item => item !== 'Honey')
+shoppingCart = shoppingCart.filter(item => item !== 'Honey');
 console.log(shoppingCart);
 
+shoppingCart[shoppingCart.indexOf("Tea")] = "Green Tea";
+console.log(shoppingCart);
+
+const ethiopia = "Ethiopia"
+if (countries.includes(ethiopia)) {
+  console.log(ethiopia.toUpperCase());
+} else {
+  countries.push(ethiopia);
+}
+console.log(countries);
