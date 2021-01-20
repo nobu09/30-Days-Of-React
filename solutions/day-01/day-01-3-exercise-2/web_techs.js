@@ -3,4 +3,5 @@ const webTechs = [
   "Ruby",
   "CI",
   "JavaScript",
+  "Sass",
 ]

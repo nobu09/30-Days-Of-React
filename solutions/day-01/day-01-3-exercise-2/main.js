@@ -32,3 +32,11 @@ if (countries.includes(ethiopia)) {
   countries.push(ethiopia);
 }
 console.log(countries);
+
+const sass = "Sass"
+if (webTechs.includes(sass)) {
+  console.log("Sass is a CSS preprocess");
+} else {
+  webTechs.push(sass);
+  console.log(webTechs);
+}
