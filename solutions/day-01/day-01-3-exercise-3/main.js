@@ -14,4 +14,11 @@ if (length % 2 === 0) {
   median = sortedAges[length / 2];
 }
 
-console.log(`median of ages: ${median}`)
+console.log(`median of ages: ${median}`);
+
+const sum = ages.reduce((sum, val) => sum += val, 0);
+console.log(`agerage of ages: ${sum / length}`);
+
+
+
+
