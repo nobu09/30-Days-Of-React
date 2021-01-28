@@ -17,8 +17,7 @@ if (length % 2 === 0) {
 console.log(`median of ages: ${median}`);
 
 const sum = ages.reduce((sum, val) => sum += val, 0);
-console.log(`agerage of ages: ${sum / length}`);
+console.log(`average of ages: ${sum / length}`);
 
-
-
-
+const range = Math.max(...ages) - Math.min(...ages);
+console.log(`(max - min) of ages: ${range}`)
