@@ -21,3 +21,8 @@ console.log(`average of ages: ${sum / length}`);
 
 const range = Math.max(...ages) - Math.min(...ages);
 console.log(`(max - min) of ages: ${range}`)
+
+const minAvg = Math.abs(Math.min(...ages) - sum / length);
+const maxAvg = Math.abs(Math.max(...ages) - sum / length);
+console.log(`minAvg of ages: ${minAvg}`)
+console.log(`maxAvg of ages: ${maxAvg}`)
