@@ -24,5 +24,12 @@ console.log(`(max - min) of ages: ${range}`)
 
 const minAvg = Math.abs(Math.min(...ages) - sum / length);
 const maxAvg = Math.abs(Math.max(...ages) - sum / length);
-console.log(`minAvg of ages: ${minAvg}`)
-console.log(`maxAvg of ages: ${maxAvg}`)
+console.log(`minAvg of ages: ${minAvg}`);
+console.log(`maxAvg of ages: ${maxAvg}`);
+
+console.log(countries.slice(0, 10));
+const middlePosition = countries.length % 2 === 0 ? countries.length / 2 : (countries.length + 1) / 2 
+console.log(countries[middlePosition]);
+
+console.log(`first array: ${countries.slice(0, middlePosition)}`);
+console.log(`second array: ${countries.slice(middlePosition, countries.length)}`);
