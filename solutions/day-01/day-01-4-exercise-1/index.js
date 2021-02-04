@@ -40,3 +40,11 @@ if (a > b) {
 a > b
   ? console.log(`${a} is greater than ${b}`)
   : console.log(`${a} is less than ${b}`);
+
+let number = prompt("Enter a number:");
+
+Number.isNaN(Number(number))
+  ? console.log("You input was not number.")
+  : number % 2 === 0
+  ? console.log(`${number} is an even number`)
+  : console.log(`${number} is an odd number`);
