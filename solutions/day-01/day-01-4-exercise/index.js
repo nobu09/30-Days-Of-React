@@ -74,29 +74,52 @@ a > b
 //     console.log("Your score is out of range");
 // }
 
-let month = prompt("Enter your month:");
+// let month = prompt("Enter your month:");
 
-switch (month) {
-  case "September":
-  case "October":
-  case "November":
-    console.log("the season is Autumn");
+// switch (month) {
+//   case "September":
+//   case "October":
+//   case "November":
+//     console.log("the season is Autumn");
+//     break;
+//   case "December":
+//   case "January":
+//   case "February":
+//     console.log("the season is Winter");
+//     break;
+//   case "March":
+//   case "April":
+//   case "May":
+//     console.log("the season is Spring");
+//     break;
+//   case "June":
+//   case "July":
+//   case "August":
+//     console.log("the season is Summer");
+//     break;
+//   default:
+//     console.log("Your input is not month");
+// }
+
+function capitalize(s) {
+  return s && s[0].toUpperCase() + s.toLowerCase().slice(1);
+}
+
+let day = prompt(" What is the day today?:");
+let displayDay = capitalize(day);
+
+switch (displayDay) {
+  case "Saturday":
+  case "Sunday":
+    console.log(`${displayDay} is a weekend.`);
     break;
-  case "December":
-  case "January":
-  case "February":
-    console.log("the season is Winter");
-    break;
-  case "March":
-  case "April":
-  case "May":
-    console.log("the season is Spring");
-    break;
-  case "June":
-  case "July":
-  case "August":
-    console.log("the season is Summer");
+  case "Monday":
+  case "Tuesday":
+  case "Wednesday":
+  case "Thursday":
+  case "Friday":
+    console.log(`${displayDay} a working day.`);
     break;
   default:
-    console.log("Your input is not month");
+    console.log("Your input is not day");
 }
