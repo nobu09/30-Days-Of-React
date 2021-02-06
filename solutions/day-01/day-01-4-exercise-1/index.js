@@ -41,10 +41,35 @@ a > b
   ? console.log(`${a} is greater than ${b}`)
   : console.log(`${a} is less than ${b}`);
 
-let number = prompt("Enter a number:");
+// let number = prompt("Enter a number:");
 
-Number.isNaN(Number(number))
-  ? console.log("You input was not number.")
-  : number % 2 === 0
-  ? console.log(`${number} is an even number`)
-  : console.log(`${number} is an odd number`);
+// Number.isNaN(Number(number))
+//   ? console.log("You input was not number.")
+//   : number % 2 === 0
+//   ? console.log(`${number} is an even number`)
+//   : console.log(`${number} is an odd number`);
+
+let score = prompt("Enter your score:");
+
+switch (true) {
+  case Number.isNaN(Number(score)):
+    console.log("You input was not number.");
+    break;
+  case score >= 90 && score <= 100:
+    console.log("Your grade is A");
+    break;
+  case score >= 70 && score < 90:
+    console.log("Your grade is B");
+    break;
+  case score >= 60 && score < 70:
+    console.log("Your grade is C");
+    break;
+  case score >= 50 && score < 60:
+    console.log("Your grade is D");
+    break;
+  case score >= 0 && score < 50:
+    console.log("Your grade is F");
+    break;
+  default:
+    console.log("Your score is out of range");
+}
