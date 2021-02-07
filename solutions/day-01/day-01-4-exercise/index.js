@@ -105,21 +105,47 @@ function capitalize(s) {
   return s && s[0].toUpperCase() + s.toLowerCase().slice(1);
 }
 
-let day = prompt(" What is the day today?:");
-let displayDay = capitalize(day);
+// let day = prompt(" What is the day today?:");
+// let displayDay = capitalize(day);
 
-switch (displayDay) {
-  case "Saturday":
-  case "Sunday":
-    console.log(`${displayDay} is a weekend.`);
+// switch (displayDay) {
+//   case "Saturday":
+//   case "Sunday":
+//     console.log(`${displayDay} is a weekend.`);
+//     break;
+//   case "Monday":
+//   case "Tuesday":
+//   case "Wednesday":
+//   case "Thursday":
+//   case "Friday":
+//     console.log(`${displayDay} a working day.`);
+//     break;
+//   default:
+//     console.log("Your input is not day");
+// }
+
+let month = prompt("Enter a month:");
+let displayMonth = capitalize(month);
+
+switch (displayMonth) {
+  case "February":
+    console.log(`${displayMonth} has 28 days.`);
     break;
-  case "Monday":
-  case "Tuesday":
-  case "Wednesday":
-  case "Thursday":
-  case "Friday":
-    console.log(`${displayDay} a working day.`);
+  case "April":
+  case "June":
+  case "September":
+  case "November":
+    console.log(`${displayMonth} has 30 days.`);
+    break;
+  case "January":
+  case "March":
+  case "May":
+  case "July":
+  case "August":
+  case "October":
+  case "December":
+    console.log(`${displayMonth} has 31 days.`);
     break;
   default:
-    console.log("Your input is not day");
+    console.log("Your input is not month");
 }
