@@ -124,26 +124,77 @@ function capitalize(s) {
 //     console.log("Your input is not day");
 // }
 
+// let month = prompt("Enter a month:");
+// let displayMonth = capitalize(month);
+
+// switch (displayMonth) {
+//   case "February":
+//     console.log(`${displayMonth} has 28 days.`);
+//     break;
+//   case "April":
+//   case "June":
+//   case "September":
+//   case "November":
+//     console.log(`${displayMonth} has 30 days.`);
+//     break;
+//   case "January":
+//   case "March":
+//   case "May":
+//   case "July":
+//   case "August":
+//   case "October":
+//   case "December":
+//     console.log(`${displayMonth} has 31 days.`);
+//     break;
+//   default:
+//     console.log("Your input is not month");
+// }
+
+let year = prompt("Enter the year:");
+let leapYear = false;
+
+switch (true) {
+  case Number.isNaN(Number(year)):
+    console.log("You input was not year.");
+    break;
+  case year < 0:
+    console.log("You input was not positive number year.");
+    break;
+  case year % 4 != 0:
+    break;
+  case year % 100 != 0:
+    leapYear = true;
+    break;
+  case year % 400 != 0:
+    break;
+  default:
+    learYear = true;
+}
+
+console.log(leapYear);
+
 let month = prompt("Enter a month:");
 let displayMonth = capitalize(month);
 
-switch (displayMonth) {
-  case "February":
+switch (true) {
+  case leapYear && displayMonth == "February":
+    console.log(`${displayMonth} has 29 days.`);
+    break;
+  case !leapYear && displayMonth == "February":
     console.log(`${displayMonth} has 28 days.`);
     break;
-  case "April":
-  case "June":
-  case "September":
-  case "November":
+  case ["April", "June", "September", "November"].includes(displayMonth):
     console.log(`${displayMonth} has 30 days.`);
     break;
-  case "January":
-  case "March":
-  case "May":
-  case "July":
-  case "August":
-  case "October":
-  case "December":
+  case [
+    "January",
+    "March",
+    "May",
+    "July",
+    "August",
+    "October",
+    "December",
+  ].includes(displayMonth):
     console.log(`${displayMonth} has 31 days.`);
     break;
   default:
