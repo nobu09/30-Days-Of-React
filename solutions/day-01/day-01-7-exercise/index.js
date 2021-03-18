@@ -104,3 +104,8 @@ const skillful_user = usersArray.reduce((skillful_user, user) => {
 }, usersArray[0]);
 
 console.log(skillful_user);
+
+const loggedCount = usersArray.reduce((count, user) => {
+  return user[1].isLoggedIn ? count + 1 : count;
+}, 0);
+console.log(loggedCount);
