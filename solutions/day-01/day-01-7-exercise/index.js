@@ -102,10 +102,30 @@ const skillful_user = usersArray.reduce((skillful_user, user) => {
 
   return skillful_user;
 }, usersArray[0]);
-
 console.log(skillful_user);
 
 const loggedCount = usersArray.reduce((count, user) => {
   return user[1].isLoggedIn ? count + 1 : count;
 }, 0);
 console.log(loggedCount);
+
+const over50Users = usersArray.reduce((result, user) => {
+  return user[1].points >= 50 ? [...result, user] : result;
+}, []);
+console.log(over50Users);
+
+const mern = (array) => {
+  return (
+    array.includes("MongoDB") &&
+    array.includes("Express") &&
+    array.includes("React") &&
+    array.includes("Node")
+  );
+};
+
+const mernUsers = usersArray.reduce((result, user) => {
+  return mern(user[1].skills) ? [...result, user] : result;
+}, []);
+console.log(mernUsers);
+
+// Set your name in the users object without modifying the original users object
