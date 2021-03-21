@@ -129,3 +129,10 @@ const mernUsers = usersArray.reduce((result, user) => {
 console.log(mernUsers);
 
 // Set your name in the users object without modifying the original users object
+users["Nobu"] = {
+  email: "nobu@nobu.com",
+  skills: ["HTML", "CSS", "JavaScript", "React", "Ruby", "Rails"],
+  isLoggedIn: true,
+  points: 30,
+};
+console.log(users);
