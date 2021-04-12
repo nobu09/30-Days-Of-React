@@ -136,3 +136,6 @@ users["Nobu"] = {
   points: 30,
 };
 console.log(users);
+
+// 5.Get all keys or properties of users object
+console.log(Object.keys(users));
