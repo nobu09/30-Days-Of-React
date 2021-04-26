@@ -142,3 +142,26 @@ console.log(Object.keys(users));
 
 // 6.Get all the values of users object
 console.log(Object.values(users));
+
+// Exercise level3
+const personAccount = {
+  firstName: "nobu",
+  lastName: "tanaka",
+  incomes: 300000,
+  expenses: 200000,
+  totalIncome: function () {
+    return this.incomes;
+  },
+  accountInfo: function () {
+    return this.incomes;
+  },
+  addIncome: function (add) {
+    this.incomes += add;
+  },
+  addExpense: function (add) {
+    this.expenses += add;
+  },
+  accountBalance: function () {
+    return this.incomes - this.expenses;
+  },
+};
