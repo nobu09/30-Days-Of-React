@@ -253,5 +253,21 @@ function signUp(name) {
   }
 }
 
+// let name = prompt("Enter your name");
+// signUp(name);
+
+function signIn(name, password) {
+  let user = users.find(
+    (user) => user.username === name && user.password === password
+  );
+
+  if (user) {
+    console.log(`Hello, ${name}! You have logged in.`);
+  } else {
+    console.log("Sorry, we couldn't find your name or password.");
+  }
+}
+
 let name = prompt("Enter your name");
-signUp(name);
+let password = prompt("Enter your password");
+signIn(name, password);
