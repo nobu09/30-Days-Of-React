@@ -263,11 +263,39 @@ function signIn(name, password) {
 
   if (user) {
     console.log(`Hello, ${name}! You have logged in.`);
+    return user;
   } else {
     console.log("Sorry, we couldn't find your name or password.");
+    return null;
+  }
+}
+
+function rateProduct(user, productName, rate) {
+  let targetProduct = products.find((product) => product.name === productName);
+  let rateNumber = Number(rate);
+  if (Number.isNaN(rateNumber)) {
+    console.log("Your rate is not a number.");
+    return;
+  }
+  if (rateNumber < 1 || rateNumber > 5) {
+    console.log("Your rate is out of range.");
+    return;
+  }
+
+  if (targetProduct) {
+    targetProduct.ratings.push({ userId: user._id, rate: rateNumber });
+  } else {
+    console.log("We couldn't find your input product.");
   }
 }
 
 let name = prompt("Enter your name");
 let password = prompt("Enter your password");
-signIn(name, password);
+const user = signIn(name, password);
+console.log(user);
+
+let product = prompt("Enter the product name to rate.");
+let rate = prompt("Enter rate number 1-5.");
+
+rateProduct(user, product, rate);
+console.log(products);
