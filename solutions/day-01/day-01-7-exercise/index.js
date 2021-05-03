@@ -289,13 +289,34 @@ function rateProduct(user, productName, rate) {
   }
 }
 
-let name = prompt("Enter your name");
-let password = prompt("Enter your password");
-const user = signIn(name, password);
-console.log(user);
+function averageRating(name) {
+  let targetProduct = products.find((product) => product.name === name);
 
-let product = prompt("Enter the product name to rate.");
-let rate = prompt("Enter rate number 1-5.");
+  if (targetProduct) {
+    if (targetProduct.ratings.length === 0) {
+      console.log("rateされていません");
+      return;
+    }
+    let sum = targetProduct.ratings.reduce((result, value) => {
+      result += value.rate;
+      return result;
+    }, 0);
+    console.log(`平均は${sum / targetProduct.ratings.length}です`);
+  } else {
+    console.log("指定したプロダクトは存在しません");
+  }
+}
 
-rateProduct(user, product, rate);
-console.log(products);
+// let name = prompt("Enter your name");
+// let password = prompt("Enter your password");
+// const user = signIn(name, password);
+// console.log(user);
+
+// let product = prompt("Enter the product name to rate.");
+// let rate = prompt("Enter rate number 1-5.");
+
+// rateProduct(user, product, rate);
+// console.log(products);
+
+let product = prompt("Enter the product name to average rate.");
+averageRating(product);
