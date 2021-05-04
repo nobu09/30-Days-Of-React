@@ -307,10 +307,27 @@ function averageRating(name) {
   }
 }
 
-// let name = prompt("Enter your name");
-// let password = prompt("Enter your password");
-// const user = signIn(name, password);
-// console.log(user);
+function likeProduct(user, productName) {
+  let targetProduct = products.find((product) => product.name === productName);
+
+  if (targetProduct) {
+    let like = targetProduct.likes.find((like) => like === user._id);
+    if (like) {
+      targetProduct.likes.splice(targetProduct.likes.indexOf(like));
+    } else {
+      targetProduct.likes.push(user._id);
+    }
+  } else {
+    console.log("指定したプロダクトは存在しません");
+  }
+
+  console.log(targetProduct.likes);
+}
+
+let name = prompt("Enter your name");
+let password = prompt("Enter your password");
+const user = signIn(name, password);
+console.log(user);
 
 // let product = prompt("Enter the product name to rate.");
 // let rate = prompt("Enter rate number 1-5.");
@@ -318,5 +335,8 @@ function averageRating(name) {
 // rateProduct(user, product, rate);
 // console.log(products);
 
-let product = prompt("Enter the product name to average rate.");
-averageRating(product);
+// let product = prompt("Enter the product name to average rate.");
+// averageRating(product);
+
+let product = prompt("Enter the product name to like or dislike.");
+likeProduct(user, product);
